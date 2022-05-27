@@ -56,9 +56,9 @@ CREATE TABLE `doctor` (
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`doctorId`' `password`,  `doctorFirstName`,`doctorAddress`, `doctorPhone`, `doctorEmail`, `doctorDOB`) VALUES
+INSERT INTO `doctor` (`doctorId`,`password`,  `doctorFirstName`,`doctorAddress`, `doctorPhone`, `doctorEmail`, `doctorDOB`) VALUES
 ('123', 123,'Sehgal', 'amritsar', '0173567758', 'dsehgal@gmail.com', '1990-04-10');
-
+                      
 -- --------------------------------------------------------
 
 --
@@ -68,7 +68,6 @@ INSERT INTO `doctor` (`doctorId`' `password`,  `doctorFirstName`,`doctorAddress`
 CREATE TABLE `doctorschedule` (
   `scheduleId` int(11) NOT NULL,
   `scheduleDate` date NOT NULL,
-  `scheduleDay` varchar(15) NOT NULL,
   `startTime` time NOT NULL,
   `endTime` time NOT NULL,
   `bookAvail` varchar(10) NOT NULL
@@ -79,11 +78,11 @@ CREATE TABLE `doctorschedule` (
 --
 
 INSERT INTO `doctorschedule` (`scheduleId`, `scheduleDate`, `scheduleDay`, `startTime`, `endTime`, `bookAvail`) VALUES
-(40, '2015-12-13', 'Sunday', '09:00:00', '10:00:00', 'notavail'),
-(41, '2015-12-13', 'Sunday', '10:00:00', '11:00:00', 'available'),
-(42, '2015-12-13', 'Sunday', '11:00:00', '12:00:00', 'available'),
-(43, '2015-12-14', 'Monday', '11:00:00', '12:00:00', 'available'),
-(44, '2015-12-13', 'Sunday', '01:00:00', '02:00:00', 'available');
+(40, '2015-12-13', '09:00:00', '10:00:00', 'notavail'),
+(41, '2015-12-13', '10:00:00', '11:00:00', 'available'),
+(42, '2015-12-13', '11:00:00', '12:00:00', 'available'),
+(43, '2015-12-14', '11:00:00', '12:00:00', 'available'),
+(44, '2015-12-13', '01:00:00', '02:00:00', 'available');
 
 -- --------------------------------------------------------
 
@@ -92,11 +91,9 @@ INSERT INTO `doctorschedule` (`scheduleId`, `scheduleDate`, `scheduleDay`, `star
 --
 
 CREATE TABLE `patient` (
-  `icPatient` bigint(12) NOT NULL,
+  `Patientid` bigint(12) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `patientFirstName` varchar(20) NOT NULL,
-  `patientLastName` varchar(20) NOT NULL,
-  `patientMaritialStatus` varchar(10) NOT NULL,
+  `patientName` varchar(20) NOT NULL,
   `patientDOB` date NOT NULL,
   `patientGender` varchar(10) NOT NULL,
   `patientAddress` varchar(100) NOT NULL,
@@ -108,8 +105,12 @@ CREATE TABLE `patient` (
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`icPatient`, `password`, `patientFirstName`, `patientLastName`, `patientMaritialStatus`, `patientDOB`, `patientGender`, `patientAddress`, `patientPhone`, `patientEmail`) VALUES
-(920517105553, '123', 'Mohd', 'Mazlan', 'single', '1992-05-17', 'male', 'NO 153 BLOK MURNI\r\nKOLEJ CANSELOR UNIVERSITI PUTRA MALAYSIA', '173567758', 'lan.psis@gmail.com');
+INSERT INTO `patient` (`Patientid`, `password`, `patientName`, `patientDOB`, `patientGender`, `patientAddress`, `patientPhone`, `patientEmail`) VALUES
+(1, '123', 'Mohamad',  '1992-05-17', 'male', 'mysore', '173567758', 'lan.psis@gmail.com'),
+(2, '124', 'avi',  '1992-05-23', 'male', 'mysore', '173567759', 'san.psis@gmail.com'),
+(3, '125', 'shilpa',  '1992-03-27', 'female', 'bang', '173567790', 'sil.psis@gmail.com'),
+(4, '126', 'sreya',  '1998-05-07', 'female', 'mysore', '173566648', 'sre.psis@gmail.com'),
+(5, '127', 'priya',  '1999-07-14', 'female', 'mysore', '173566758', 'pri.psis@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -121,14 +122,14 @@ INSERT INTO `patient` (`icPatient`, `password`, `patientFirstName`, `patientLast
 ALTER TABLE `appointment`
   ADD PRIMARY KEY (`appId`),
   ADD UNIQUE KEY `scheduleId_2` (`scheduleId`),
-  ADD KEY `patientIc` (`patientIc`),
+  ADD KEY `patientId` (`patientId`),
   ADD KEY `scheduleId` (`scheduleId`);
 
 --
 -- Indexes for table `doctor`
 --
 ALTER TABLE `doctor`
-  ADD PRIMARY KEY (`icDoctor`);
+  ADD PRIMARY KEY (`Doctorid`);
 
 --
 -- Indexes for table `doctorschedule`
@@ -140,7 +141,7 @@ ALTER TABLE `doctorschedule`
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
-  ADD PRIMARY KEY (`icPatient`);
+  ADD PRIMARY KEY (`Patientid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -149,14 +150,14 @@ ALTER TABLE `patient`
 --
 -- AUTO_INCREMENT for table `appointment`
 --
-ALTER TABLE `appointment`
-  MODIFY `appId` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+--ALTER TABLE `appointment`
+--MODIFY `appId` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
 
 --
 -- AUTO_INCREMENT for table `doctorschedule`
 --
-ALTER TABLE `doctorschedule`
-  MODIFY `scheduleId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+--ALTER TABLE `doctorschedule`
+--  MODIFY `scheduleId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- Constraints for dumped tables
