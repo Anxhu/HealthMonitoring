@@ -167,7 +167,7 @@ ALTER TABLE `patient`
 -- Constraints for table `appointment`
 --
 ALTER TABLE `appointment`
-  ADD CONSTRAINT `appointment_ibfk_4` FOREIGN KEY (`patientIc`) REFERENCES `patient` (`icPatient`),
+  ADD CONSTRAINT `appointment_ibfk_4` FOREIGN KEY (`patientId`) REFERENCES `patient` (`idPatient`),
   ADD CONSTRAINT `appointment_ibfk_5` FOREIGN KEY (`scheduleId`) REFERENCES `doctorschedule` (`scheduleId`);
 COMMIT;
 
