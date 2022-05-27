@@ -17,10 +17,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `appointment` (
   `appId` int(3) NOT NULL,
-  `patientIc` bigint(12) NOT NULL,
+  `patientId` bigint(12) NOT NULL,
   `scheduleId` int(10) NOT NULL,
-  `appSymptom` varchar(100) NOT NULL,
-  `appComment` varchar(100) NOT NULL,
+  `appSymptom` varchar(100) NOT NULL
   `status` varchar(10) NOT NULL DEFAULT 'process'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -28,8 +27,12 @@ CREATE TABLE `appointment` (
 -- Dumping data for table `appointment`
 --
 
-INSERT INTO `appointment` (`appId`, `patientIc`, `scheduleId`, `appSymptom`, `appComment`, `status`) VALUES
-(86, 920517105553, 40, 'Pening Kepala', 'Bila doktor free?', 'done');
+INSERT INTO `appointment` (`appId`, `patientId`, `scheduleId`, `appSymptom`, `status`) VALUES
+(86, 1, 40, 'fever','done'),
+(86, 2, 41, 'diarheaa','done'),
+(86, 3, 42, 'tuberculosis','done'),
+(86, 4, 43, 'cancer','done'),
+(86, 5, 44, 'HIV AIDS','done');
 
 -- --------------------------------------------------------
 
@@ -38,11 +41,11 @@ INSERT INTO `appointment` (`appId`, `patientIc`, `scheduleId`, `appSymptom`, `ap
 --
 
 CREATE TABLE `doctor` (
-  `icDoctor` bigint(12) NOT NULL,
+`doctorId` int(3) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `doctorId` int(3) NOT NULL,
-  `doctorFirstName` varchar(50) NOT NULL,
-  `doctorLastName` varchar(50) NOT NULL,
+  
+  `doctortName` varchar(50) NOT NULL,
+  
   `doctorAddress` varchar(100) NOT NULL,
   `doctorPhone` varchar(15) NOT NULL,
   `doctorEmail` varchar(20) NOT NULL,
@@ -53,8 +56,8 @@ CREATE TABLE `doctor` (
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`icDoctor`, `password`, `doctorId`, `doctorFirstName`, `doctorLastName`, `doctorAddress`, `doctorPhone`, `doctorEmail`, `doctorDOB`) VALUES
-(123456789, '123', 123, 'Doctor', 'Sehgal', 'kuala lumpur', '0173567758', 'dsehgal@gmail.com', '1990-04-10');
+INSERT INTO `doctor` (`doctorId`' `password`,  `doctorFirstName`,`doctorAddress`, `doctorPhone`, `doctorEmail`, `doctorDOB`) VALUES
+('123', 123,'Sehgal', 'amritsar', '0173567758', 'dsehgal@gmail.com', '1990-04-10');
 
 -- --------------------------------------------------------
 
