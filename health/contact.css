@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contc {
+    margin-top: 7%;
+    width: 100%;
+    height: 80vh;
+    background-image: url("contactjpg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.contheading {
+    padding-top: 20%;
+    padding-left: 10%;
+    color: azure;
+    font-size: 65px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.contcontent {
+    color: azure;
+    font-family: 'Trebuchet MS', sans-serif;
+    padding-left: 10%;
+    font-size: 20px;
+}
+
+.cont12 {
+    width: 55%;
+}
+
+.linec {
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    background-color: azure;
+    margin-left: 5%;
+}
+
+.feedbackcard {
+    width: 60%;
+}
+
+form {
+    width: 50%;
+    padding: 15px 40px 40px;
+    margin: 4% auto;
+    border-radius: 25px;
+    background-color: rgb(64, 64, 138);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: azure;
+    font-size: 15px;
+}
+
+label i {
+    color: rgb(64, 64, 138);
+    font-size: 25px;
+}
+
+input,
+select {
+    border: 1px solid blue;
+    padding: 10px;
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.fbox {
+    padding-bottom: 10px;
+}
+
+.genderc {
+    padding: 8px;
+}
+
+.genderc label,
+.genderc input {
+    display: inline-block;
+    padding: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 90%;
+}
+
+input[type="text"] {
+    outline: none;
+}
+
+input[type="submit"] {
+    font-size: 110%;
+    font-weight: 200;
+    background-color: azure;
+    color: rgb(64, 64, 138);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(124, 157, 226);
+    color: azure;
+    font-weight: 200;
+}
+
+.outerCard1 {
+    margin-top: 5%;
+    display: flex;
+}
+
+.feedbackcard {
+    margin-left: 3%;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-right: 1px solid #696969;
+    border-radius: 25px;
+}
+
+.feedbackcard span {
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    background-color: rgb(64, 64, 138);
+}
+
+.contactcard {
+    font-family: 'Trebuchet MS', sans-serif;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 2.5%;
+}
+
+.contactcard span {
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    background-color: rgb(64, 64, 138);
+}

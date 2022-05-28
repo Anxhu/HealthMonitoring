@@ -1,0 +1,91 @@
+body {
+    background-color: #ABB2B9;
+}
+
+h1 {
+    font-size: 40px;
+    color: darkblue;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 30px;
+    color: darkblue;
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 27px;
+    color: darkblue;
+    font-family: sans-serif;
+    margin: 10px;
+    padding: 20px;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 25px;
+    margin: 10px;
+    padding: 20px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+table {
+    border: thick solid black;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    align-self: center;
+    width: 100%;
+}
+
+.one {
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-radius: 12px;
+    border-spacing: 2px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+button {
+    background-color: darkblue;
+    border: thin solid black;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+}
+
+hr {
+    border-color: white;
+    width: 100%;
+    border-width: 5px;
+    border-style: none;
+    border-top-style: solid;
+}
+
+.lielement {
+    font-size: 25px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 20px;
+}
+
+.i1 {
+    border: 3px solid black;
+    border-radius: 12px;
+    border-spacing: 2px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
